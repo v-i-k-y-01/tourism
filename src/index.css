@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+  }
+
+  body {
+    @apply bg-nature-bg text-nature-forest antialiased;
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+
+  ::selection {
+    @apply bg-nature-azure/25 text-nature-forest;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/60;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #c74634 0%, #a91d2a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .perspective-container {
+    perspective: 1000px;
+  }
+
+}
