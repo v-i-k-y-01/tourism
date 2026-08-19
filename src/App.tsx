@@ -6,6 +6,8 @@ import PopularTours from "./components/PopularTours";
 import PackageTypes from "./components/PackageTypes";
 import Stats from "./components/Stats";
 import Testimonials from "./components/Testimonials";
+import WhyChooseUs from "./components/WhyChooseUs";
+import DestinationExplorer from "./components/DestinationExplorer";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -24,7 +26,9 @@ export default function App() {
         <Hero />
         <AboutClaassical />
         <PopularTours />
+        <DestinationExplorer />
         <PackageTypes />
+        <WhyChooseUs />
         <Stats />
         <Testimonials />
       </main>

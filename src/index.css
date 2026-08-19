@@ -10,21 +10,21 @@
 
   body {
     @apply bg-nature-bg text-nature-forest antialiased;
-    font-family: "Poppins", system-ui, sans-serif;
+    font-family: "DM Sans", system-ui, sans-serif;
   }
 
   ::selection {
-    @apply bg-nature-azure/25 text-nature-forest;
+    @apply bg-nature-azure/40 text-nature-forest;
   }
 }
 
 @layer utilities {
   .glass-card {
-    @apply bg-white/70 backdrop-blur-xl border border-white/60;
+    @apply rounded-[28px] border border-black/5 bg-[#f5f5f5] backdrop-blur-xl;
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #c74634 0%, #a91d2a 100%);
+    background: linear-gradient(135deg, #7a1422 0%, #4a1018 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -33,5 +33,22 @@
   .perspective-container {
     perspective: 1000px;
   }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.18em] text-nature-cobalt;
+  }
+
+  .boarding-pass-issuing {
+    animation: boardingPassTear 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes boardingPassTear {
+    0% { transform: rotate(0) scale(1); }
+    18% { transform: rotate(-0.35deg) scale(1.008); }
+    38% { transform: rotate(0.4deg) scale(1.01); }
+    64% { transform: translateX(8px) rotate(0.7deg) scale(1.015); clip-path: polygon(0 0, 100% 0, 100% 46%, 96% 50%, 100% 54%, 100% 100%, 0 100%, 0 54%, 4% 50%, 0 46%); }
+    100% { transform: translateX(0) rotate(0) scale(1); clip-path: polygon(0 0, 100% 0, 100% 46%, 96% 50%, 100% 54%, 100% 100%, 0 100%, 0 54%, 4% 50%, 0 46%); }
+  }
+
 
 }

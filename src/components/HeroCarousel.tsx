@@ -14,7 +14,7 @@ const SLIDES = [
 
 const SLIDE_DURATION = 6000;
 
-export default function HeroCarousel() {
+export default function HeroCarousel({ className = "" }: { className?: string }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+    <div className={`pointer-events-none relative h-full overflow-hidden ${className}`} aria-hidden="true">
       <AnimatePresence mode="sync">
         <motion.div
           key={index}
@@ -43,9 +43,6 @@ export default function HeroCarousel() {
           />
         </motion.div>
       </AnimatePresence>
-
-      <div className="absolute inset-0 bg-gradient-to-b from-nature-forest/75 via-nature-forest/45 to-nature-bg/90" />
-      <div className="absolute inset-0 bg-gradient-to-t from-nature-cobalt/20 via-transparent to-nature-azure/10 mix-blend-multiply" />
 
       <div className="absolute inset-x-0 bottom-6 flex justify-center gap-2">
         {SLIDES.map((slide, i) => (

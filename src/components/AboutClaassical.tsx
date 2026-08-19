@@ -25,19 +25,20 @@ const CARDS = [
 
 export default function AboutClaassical() {
   return (
-    <section id="about" className="relative mx-auto max-w-6xl px-6 py-20 sm:py-24">
+    <section id="about" className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-2xl text-center">
+        <p className="eyebrow mb-4">The Classic 360 Difference</p>
         <RevealText
           as="h2"
-          text="At Claassical, we turn travel dreams into reality"
-          className="text-3xl font-extrabold tracking-tight text-nature-forest sm:text-4xl"
+          text="Travel should feel as special as the place itself."
+          className="font-display text-4xl font-semibold leading-none tracking-tight text-nature-forest sm:text-6xl"
         />
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-5 text-base text-nature-forest/70 sm:text-lg"
+          className="mt-6 text-base leading-relaxed text-nature-slate sm:text-lg"
         >
           A Salem-based team of travel planners who handle the logistics so you can focus on the experience.
         </motion.p>
@@ -51,7 +52,7 @@ export default function AboutClaassical() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.65, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-            className="group overflow-hidden rounded-2xl border border-nature-cobalt/10 bg-white shadow-card transition-shadow duration-300 hover:shadow-card-hover"
+            className="group overflow-hidden rounded-[28px] border border-black/5 bg-[#f5f5f5] shadow-card transition-shadow duration-300 hover:shadow-card-hover"
           >
             <div className="h-56 overflow-hidden">
               <img
@@ -62,11 +63,11 @@ export default function AboutClaassical() {
               />
             </div>
             <div className="p-6">
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="text-xl font-bold text-nature-forest">{title}</h3>
+              <div className="flex items-start justify-between gap-4 border-b border-nature-forest/10 pb-4">
+                <h3 className="font-display text-2xl font-bold text-nature-forest">{title}</h3>
                 <ArrowUpRight size={19} className="mt-1 shrink-0 text-nature-azure transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-nature-forest/70">{copy}</p>
+              <p className="mt-4 text-sm leading-relaxed text-nature-slate">{copy}</p>
             </div>
           </motion.article>
         ))}

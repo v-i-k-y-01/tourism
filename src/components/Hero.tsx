@@ -11,16 +11,15 @@ export default function Hero() {
   const [destination, setDestination] = useState("");
 
   return (
-    <section id="home" className="relative flex min-h-[92vh] items-center overflow-hidden pb-16 pt-32 sm:pt-40">
-      <HeroCarousel />
-
-      <div className="perspective-container relative mx-auto flex w-full max-w-4xl flex-col items-center px-6 text-center">
+    <section id="home" className="bg-white px-5 pb-14 pt-32 sm:px-8 sm:pt-40 lg:pb-20">
+      <div className="mx-auto grid max-w-[1440px] items-stretch gap-6 lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="flex flex-col justify-center py-8 text-left lg:px-8">
 
         <motion.span
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-6 inline-flex items-center gap-2 rounded-2xl border border-white/30 bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white shadow-sm backdrop-blur-xl"
+          className="mb-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#f4f4f4] px-4 py-2 text-xs font-bold uppercase tracking-[0.15em] text-nature-cobalt"
         >
           <MapPin size={14} />
           Your Journey Starts Here
@@ -28,8 +27,8 @@ export default function Hero() {
 
         <RevealText
           as="h1"
-          text="Explore. Discover. Wander. Belong."
-          className="text-4xl font-extrabold leading-tight tracking-tight text-white drop-shadow-lg sm:text-6xl lg:text-7xl"
+          text="Your next great escape starts here."
+          className="font-display text-5xl font-semibold leading-[0.94] tracking-tight text-nature-forest sm:text-7xl"
         />
 
         <motion.p
@@ -37,9 +36,9 @@ export default function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-6 max-w-2xl text-base text-white/85 drop-shadow sm:text-lg"
+          className="mt-7 max-w-xl text-base leading-relaxed text-nature-slate sm:text-lg"
         >
-          Handpicked domestic and international getaways, planned end-to-end by Claassical so every trip feels effortless.
+          Thoughtfully planned domestic and international holidays from Salem—designed around the moments you want to remember.
         </motion.p>
 
         <motion.div
@@ -47,10 +46,10 @@ export default function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.65 }}
-          className="mt-10 grid w-full max-w-3xl grid-cols-1 gap-3 rounded-2xl border border-white/60 bg-white/90 p-3 shadow-card backdrop-blur-xl sm:grid-cols-[1.4fr_1fr_1fr_auto] sm:items-center"
+          className="mt-10 grid w-full max-w-3xl grid-cols-1 gap-0 rounded-[28px] bg-[#f4f4f4] p-2 sm:grid-cols-[1.4fr_1fr_1fr_auto] sm:items-center"
         >
           <label className="flex items-center gap-2 rounded-xl px-3 py-2.5 text-left sm:border-r sm:border-nature-azure/10">
-            <MapPin size={18} className="shrink-0 text-nature-azure" />
+            <MapPin size={18} className="shrink-0 text-nature-cobalt" />
             <input
               list="destinations"
               value={destination}
@@ -66,7 +65,7 @@ export default function Hero() {
           </label>
 
           <label className="flex items-center gap-2 rounded-xl px-3 py-2.5 text-left sm:border-r sm:border-nature-azure/10">
-            <CalendarDays size={18} className="shrink-0 text-nature-azure" />
+            <CalendarDays size={18} className="shrink-0 text-nature-cobalt" />
             <input
               type="text"
               placeholder="Travel dates"
@@ -76,7 +75,7 @@ export default function Hero() {
           </label>
 
           <label className="flex items-center gap-2 rounded-xl px-3 py-2.5 text-left">
-            <Users size={18} className="shrink-0 text-nature-azure" />
+            <Users size={18} className="shrink-0 text-nature-cobalt" />
             <input
               type="number"
               min={1}
@@ -105,11 +104,15 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.8 }}
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.97 }}
-          className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-white px-8 py-4 text-base font-semibold text-nature-forest shadow-card"
+          className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-nature-forest px-7 py-4 text-sm font-bold text-white shadow-card"
         >
           Browse All Packages
           <ArrowRight size={18} strokeWidth={2.5} />
         </motion.a>
+        </div>
+        <div className="min-h-[460px] overflow-hidden rounded-[32px] lg:min-h-[620px]">
+          <HeroCarousel />
+        </div>
       </div>
     </section>
   );

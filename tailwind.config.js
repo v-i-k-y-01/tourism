@@ -5,25 +5,26 @@ export default {
     extend: {
       colors: {
         nature: {
-          forest: "#5C171B",
-          meadow: "#8F2528",
-          slate: "#8B6661",
-          azure: "#C74634",
-          cobalt: "#A91D2A",
-          bg: "#FFF8EC",
+          forest: "#151515",
+          meadow: "#2B2B2B",
+          slate: "#626262",
+          azure: "#EDEDED",
+          cobalt: "#7A1422",
+          bg: "#FFFFFF",
         },
       },
       fontFamily: {
-        sans: ["Poppins", "system-ui", "sans-serif"],
+        sans: ["DM Sans", "system-ui", "sans-serif"],
+        display: ["Cormorant Garamond", "Georgia", "serif"],
       },
       boxShadow: {
-        card: "0 20px 45px -15px rgba(92, 23, 27, 0.18)",
-        "card-hover": "0 30px 60px -12px rgba(199, 70, 52, 0.25)",
-        glow: "0 0 60px rgba(169, 29, 42, 0.22)",
+        card: "0 12px 30px -25px rgba(0, 0, 0, 0.25)",
+        "card-hover": "0 24px 48px -24px rgba(0, 0, 0, 0.3)",
+        glow: "0 12px 35px -22px rgba(122, 20, 34, 0.4)",
       },
       backgroundImage: {
-        "nature-gradient": "linear-gradient(135deg, #C74634 0%, #A91D2A 100%)",
-        "nature-gradient-green": "linear-gradient(135deg, #8F2528 0%, #5C171B 100%)",
+        "nature-gradient": "linear-gradient(135deg, #7A1422 0%, #4A1018 100%)",
+        "nature-gradient-green": "linear-gradient(135deg, #2B2B2B 0%, #151515 100%)",
       },
       animation: {
         "mesh-move": "meshMove 18s ease-in-out infinite",
