@@ -1,46 +1,64 @@
-# Claassical — MakeMyTrip Blue & White Travel Revamp
+# Claassical Travel Landing Page
 
-React + TypeScript + Vite + Tailwind CSS + Framer Motion + lucide-react.
+A modern tourism landing page built with React, TypeScript, Vite, Tailwind CSS, Framer Motion, and lucide-react.
 
-## Setup
+## Requirements
 
-This machine doesn't have Node.js installed. Install it first:
+Make sure you have Node.js installed on your machine.
 
-1. Download and install Node.js LTS from https://nodejs.org (v18+).
-2. Restart your terminal so `node`/`npm` are on PATH.
+- Recommended version: Node.js 18+ or later
+- Install from: https://nodejs.org
 
-## Run
+## Run the app locally
+
+1. Open a terminal in the project root.
+2. Install dependencies:
 
 ```bash
 npm install
+```
+
+3. Start the development server:
+
+```bash
 npm run dev
 ```
 
-Then open the local URL Vite prints (usually http://localhost:5173).
+4. Open the local URL shown in the terminal, usually:
 
-## Build
+```text
+http://localhost:5173
+```
+
+## Production build
+
+To create a production build:
 
 ```bash
 npm run build
+```
+
+To preview the production build locally:
+
+```bash
 npm run preview
 ```
 
-## Structure
+## Project structure
 
-- `src/components/Header.tsx` — floating glass navbar with staggered reveal
-- `src/components/Hero.tsx` — headline, sub, destination/date/guest search widget, floating 3D chips
-- `src/components/AboutClaassical.tsx` — Personalized Travel / Expert Planning / Memorable Experiences tilt cards
-- `src/components/PopularTours.tsx` — Wayanad / Munnar / Kochi / Vagamon image cards with ratings
-- `src/components/PackageTypes.tsx` — Family / Honeymoon / Educational / Domestic / International tour tiles
-- `src/components/Stats.tsx` — animated stat counters on a navy band
-- `src/components/Testimonials.tsx` — traveler reviews with star ratings
-- `src/components/Footer.tsx` — CTA + Claassical contact details & socials
-- `src/components/TiltCard.tsx` — reusable 3D hover-tilt card (`rotateX/rotateY/z`)
-- `src/components/RevealText.tsx` — word-by-word scroll reveal (Framer Motion `whileInView`)
-- `src/components/GradientMesh.tsx` — animated MMT-blue gradient mesh background
+- src/App.tsx — main app layout
+- src/components/Header.tsx — top navigation bar
+- src/components/Hero.tsx — hero section and search UI
+- src/components/AboutClaassical.tsx — travel highlights
+- src/components/PopularTours.tsx — featured tour cards
+- src/components/PackageTypes.tsx — tour category tiles
+- src/components/Stats.tsx — animated stats
+- src/components/Testimonials.tsx — customer reviews
+- src/components/Footer.tsx — contact and CTA section
+- src/components/TiltCard.tsx — interactive card effect
+- src/components/RevealText.tsx — scroll reveal animation
+- src/components/GradientMesh.tsx — background visual effects
 
-## Content sourcing
+## Notes
 
-Copy, stats, and contact details are adapted from `site.startupmatricks.in` (place names, package
-categories, and business facts kept, headings/descriptions rewritten). Tour and category photos are
-hotlinked directly from that site's own media library rather than copied into this repo.
+This project is a travel marketing landing page inspired by a premium tourism brand experience, with animated sections and responsive layout styling.

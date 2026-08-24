@@ -37,12 +37,13 @@ function initials(name: string) {
 
 export default function Testimonials() {
   return (
-    <section className="relative mx-auto max-w-6xl px-6 py-16 sm:py-20">
+    <section className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-2xl text-center">
+        <p className="eyebrow mb-4">Stories from the road</p>
         <RevealText
           as="h2"
           text="Travelers who trusted us with their trip"
-          className="text-3xl font-extrabold tracking-tight text-nature-forest sm:text-4xl"
+          className="font-display text-4xl font-semibold leading-none tracking-tight text-nature-forest sm:text-6xl"
         />
       </div>
 
@@ -51,11 +52,11 @@ export default function Testimonials() {
           <TiltCard key={name} delay={i * 0.12} className="p-8">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-nature-gradient text-sm font-bold text-white">
+                <span className="flex h-11 w-11 items-center justify-center bg-nature-forest text-sm font-bold text-[#f7d58b]">
                   {initials(name)}
                 </span>
                 <div>
-                  <p className="text-sm font-bold text-nature-forest">{name}</p>
+                  <p className="font-display text-lg font-bold text-nature-forest">{name}</p>
                   <p className="text-xs text-nature-forest/60">{location}</p>
                 </div>
               </div>
@@ -73,7 +74,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-3 text-sm leading-relaxed text-nature-forest/70"
+              className="mt-3 text-sm leading-relaxed text-nature-slate"
             >
               "{quote}"
             </motion.p>

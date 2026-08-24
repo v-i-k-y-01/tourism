@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
-import { Menu, X, ArrowUpRight, Compass } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const NAV_LINKS = [
   "Home",
@@ -31,15 +31,17 @@ export default function Header() {
       initial="hidden"
       animate="visible"
       variants={container}
-      className="fixed inset-x-0 top-4 z-50 px-4 sm:top-6 sm:px-6"
+      className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white px-4 sm:px-6"
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-2xl border border-white/60 bg-white/70 px-5 py-3 shadow-card backdrop-blur-xl">
-        <motion.a href="#home" variants={item} className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-nature-gradient text-white shadow-glow">
-            <Compass size={18} strokeWidth={2.5} />
-          </span>
-          <span className="text-lg font-bold tracking-tight text-nature-forest">
-            Claassical<span className="text-nature-azure">.</span>
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-3 py-4 sm:px-8 lg:px-10">
+        <motion.a href="#home" variants={item} className="flex items-center gap-3">
+          <img
+            src="/ppf%2001.png"
+            alt="Classic 360 Holidays logo"
+            className="h-12 w-12 object-cover"
+          />
+          <span className="font-display text-2xl font-bold leading-none tracking-tight text-nature-forest">
+            Classic 360 <span className="text-sm font-semibold uppercase tracking-[0.16em] text-nature-cobalt">Holidays</span>
           </span>
         </motion.a>
 
@@ -49,7 +51,7 @@ export default function Header() {
               key={link}
               variants={item}
               href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
-              className="text-sm font-medium text-nature-forest/80 transition-colors hover:text-nature-azure"
+              className="text-sm font-bold text-nature-forest transition-colors hover:text-nature-cobalt"
             >
               {link}
             </motion.a>
@@ -59,7 +61,7 @@ export default function Header() {
         <motion.a
           variants={item}
           href="#contact"
-          className="hidden items-center gap-1.5 rounded-2xl bg-nature-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-glow transition-transform hover:scale-105 lg:inline-flex"
+          className="hidden items-center gap-1.5 rounded-full bg-nature-forest px-6 py-3 text-sm font-bold text-white transition-transform hover:scale-[1.03] lg:inline-flex"
         >
           Book Now
           <ArrowUpRight size={16} strokeWidth={2.5} />
@@ -68,7 +70,7 @@ export default function Header() {
         <motion.button
           variants={item}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-xl bg-nature-bg text-nature-forest lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-nature-forest text-white lg:hidden"
           aria-label="Toggle navigation menu"
         >
           {open ? <X size={20} /> : <Menu size={20} />}
@@ -80,14 +82,14 @@ export default function Header() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="mx-auto mt-2 flex max-w-6xl flex-col gap-1 rounded-2xl border border-white/60 bg-white/90 p-4 shadow-card backdrop-blur-xl lg:hidden"
+          className="mx-auto flex max-w-none flex-col gap-1 border-b border-nature-forest/15 bg-[#fffdf8] p-4 shadow-card lg:hidden"
         >
           {NAV_LINKS.map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
               onClick={() => setOpen(false)}
-              className="rounded-xl px-3 py-2.5 text-sm font-medium text-nature-forest/80 hover:bg-nature-bg hover:text-nature-azure"
+              className="px-3 py-2.5 text-xs font-bold uppercase tracking-[0.12em] text-nature-forest/80 hover:bg-nature-bg hover:text-nature-cobalt"
             >
               {link}
             </a>
@@ -95,7 +97,7 @@ export default function Header() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-2xl bg-nature-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-glow"
+            className="mt-2 inline-flex items-center justify-center gap-1.5 bg-nature-forest px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-white"
           >
             Book Now
             <ArrowUpRight size={16} strokeWidth={2.5} />
