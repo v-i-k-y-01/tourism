@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Star, MapPin, Calendar, Check, XCircle, ArrowRight, Clock } from "lucide-react";
+import { X, Star, MapPin, Calendar, Check, XCircle, ArrowRight, Clock, Plane } from "lucide-react";
 import type { Package } from "../data/packagesData";
 
 interface ItineraryModalProps {
@@ -11,6 +11,50 @@ interface ItineraryModalProps {
 
 export default function ItineraryModal({ isOpen, onClose, tourPackage }: ItineraryModalProps) {
   const [activeTab, setActiveTab] = useState<"itinerary" | "inclusions" | "inquire">("itinerary");
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [activeDay, setActiveDay] = useState(1);
+
+  // Reset active day when package changes
+  useEffect(() => {
+    setActiveDay(1);
+    if (containerRef.current) {
+      containerRef.current.scrollTop = 0;
+    }
+  }, [tourPackage]);
+
+  const handleScroll = () => {
+    if (!containerRef.current) return;
+    const container = containerRef.current;
+    const children = container.querySelectorAll(".itinerary-day-item");
+    let currentActive = 1;
+    let minDiff = Infinity;
+
+    children.forEach((child, index) => {
+      const rect = child.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+      const diff = Math.abs(rect.top - containerRect.top - 16);
+      if (diff < minDiff) {
+        minDiff = diff;
+        currentActive = index + 1;
+      }
+    });
+
+    setActiveDay(currentActive);
+  };
+
+  const scrollToDay = (day: number) => {
+    if (containerRef.current) {
+      const children = containerRef.current.querySelectorAll(".itinerary-day-item");
+      const targetChild = children[day - 1] as HTMLElement;
+      if (targetChild) {
+        containerRef.current.scrollTo({
+          top: targetChild.offsetTop - 16,
+          behavior: "smooth",
+        });
+        setActiveDay(day);
+      }
+    }
+  };
 
   // Prevent scroll when modal is open
   useEffect(() => {
@@ -172,19 +216,42 @@ export default function ItineraryModal({ isOpen, onClose, tourPackage }: Itinera
               </div>
 
               {/* Tab Contents */}
-              <div className="mt-6 flex-1 overflow-y-auto pr-1">
+              <div
+                ref={containerRef}
+                onScroll={handleScroll}
+                className="mt-6 flex-1 overflow-y-auto pr-1"
+              >
                 {activeTab === "itinerary" && (
-                  <div className="relative pl-4 border-l border-black/10 space-y-6 py-2">
+                  <div className="relative pl-10 py-2">
+                    {/* The vertical track line */}
+                    <div className="absolute left-[15px] top-3 bottom-3 w-0.5 bg-black/10" />
+
                     {tourPackage.itinerary.map((item) => (
-                      <div key={item.day} className="relative">
-                        {/* Timeline Circle */}
-                        <div className="absolute -left-[21px] top-1.5 flex h-3 w-3 items-center justify-center rounded-full border-2 border-nature-cobalt bg-white" />
+                      <div key={item.day} className="relative mb-8 last:mb-0 itinerary-day-item">
+                        {/* Landing Pad showing day number (clickable to snap to day) */}
+                        <button
+                          type="button"
+                          onClick={() => scrollToDay(item.day)}
+                          className="absolute -left-[35px] top-1 flex h-[20px] w-[20px] items-center justify-center rounded-full bg-[#f5f5f5] border border-black/10 text-[9px] font-bold text-nature-slate z-10 hover:border-nature-cobalt hover:text-nature-cobalt transition-colors"
+                        >
+                          {activeDay === item.day ? (
+                            <motion.div
+                              layoutId="timelinePlane"
+                              transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                              className="absolute -inset-[1px] z-20 flex items-center justify-center rounded-full bg-white text-nature-cobalt shadow-md border border-nature-cobalt"
+                            >
+                              <Plane size={11} className="rotate-90" />
+                            </motion.div>
+                          ) : (
+                            <span>{item.day}</span>
+                          )}
+                        </button>
                         
                         <div>
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-nature-cobalt">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-nature-cobalt bg-nature-azure px-2 py-0.5 rounded-full">
                             Day {item.day}
                           </span>
-                          <h4 className="mt-0.5 font-display text-lg font-bold text-nature-forest">
+                          <h4 className="mt-2.5 font-display text-lg font-bold text-nature-forest">
                             {item.title}
                           </h4>
                           <p className="mt-2 text-sm leading-relaxed text-nature-slate">
