@@ -49,7 +49,7 @@ export default function Header({ activeView, setActiveView }: HeaderProps) {
           } else {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }
-        }, 100);
+        }, 400);
       } else {
         const el = document.querySelector(link.href);
         if (el) {

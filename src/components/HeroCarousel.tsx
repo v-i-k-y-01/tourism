@@ -3,11 +3,11 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const SLIDES = [
   {
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2400&q=85",
+    image: "/images/unsplash_1500530855697-b586d89ba3ee.jpg",
     alt: "Traveler taking in a mountain valley view",
   },
   {
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2400&q=85",
+    image: "/images/unsplash_1529156069898-49953e39b3ac.jpg",
     alt: "Friends enjoying a road trip together",
   },
 ];

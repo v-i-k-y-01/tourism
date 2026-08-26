@@ -10,35 +10,35 @@ const CATEGORIES = [
   {
     title: "MICE Tourism",
     copy: "Premium corporate meetings, conferences, incentive travel, and outbound team-building retreats.",
-    image: "https://images.unsplash.com/photo-1542744173-8e0896fa7558?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1542744173-8e0896fa7558.jpg",
     view: "mice" as const,
     href: null,
   },
   {
     title: "College Tours",
     copy: "Industrial visits (IV), adventure trekking, campfires, and DJ nights for college student groups.",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1523050854058-8df90110c9f1.jpg",
     view: "college" as const,
     href: null,
   },
   {
     title: "School Tours",
     copy: "Curriculum-linked nature, science & history excursions with safety-first standards.",
-    image: "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1507608869274-d3177c8bb4c7.jpg",
     view: "school" as const,
     href: null,
   },
   {
     title: "International Tours",
     copy: "Explore Bali, Singapore, Dubai, Maldives, Thailand, and Europe, planned end-to-end.",
-    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1488646953014-85cb44e25828.jpg",
     view: "home" as const,
     href: "#international-tours",
   },
   {
     title: "Domestic Tours",
     copy: "Bespoke itineraries covering Wayanad, Munnar, Kochi, Coorg, Ooty, and Goa.",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1548013146-72479768bada.jpg",
     view: "home" as const,
     href: "#domestic-tours",
   },
@@ -54,7 +54,7 @@ export default function PackageTypes({ setActiveView }: PackageTypesProps) {
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
         }
-      }, 100);
+      }, 400);
     } else {
       e.preventDefault();
       setActiveView(cat.view);

@@ -28,7 +28,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "Indonesia",
     duration: "5 Days / 4 Nights",
     rating: 5.0,
-    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1537996194471-e657df975ab4.jpg",
     tagline: "Misty temples, tropical beaches & Nusa Penida adventure",
     category: "International",
     inclusions: [
@@ -80,7 +80,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "Southeast Asia",
     duration: "5 Days / 4 Nights",
     rating: 5.0,
-    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1525625293386-3f8f99389edd.jpg",
     tagline: "Gardens by the Bay & Sentosa Island adventures",
     category: "International",
     inclusions: [
@@ -132,7 +132,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "United Arab Emirates",
     duration: "6 Days / 5 Nights",
     rating: 5.0,
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1512453979798-5ea266f8880c.jpg",
     tagline: "Burj Khalifa, Desert Safari & futuristic skyline cruises",
     category: "International",
     inclusions: [
@@ -190,7 +190,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "Indian Ocean",
     duration: "4 Days / 3 Nights",
     rating: 5.0,
-    image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1514282401047-d79a71a590e8.jpg",
     tagline: "Overwater villas, private beaches & crystal clear waters",
     category: "International",
     inclusions: [
@@ -236,7 +236,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "Southeast Asia",
     duration: "5 Days / 4 Nights",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1596422846543-75c6fc197f07.jpg",
     tagline: "Kuala Lumpur skyline, Batu Caves & Genting Highlands",
     category: "International",
     inclusions: [
@@ -288,7 +288,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "South Asia",
     duration: "6 Days / 5 Nights",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1586181108511-5e5511e12e7c?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1586181108511-5e5511e12e7c.jpg",
     tagline: "Sigiriya Rock Fortress, Kandy temples & Bentota beach",
     category: "International",
     inclusions: [
@@ -345,7 +345,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "Europe",
     duration: "8 Days / 7 Nights",
     rating: 5.0,
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1502602898657-3e91760cbb34.jpg",
     tagline: "Eiffel Tower, Seine Cruise, Mt. Titlis & Swiss Lakes",
     category: "International",
     inclusions: [
@@ -415,13 +415,13 @@ export const TOUR_PACKAGES: Package[] = [
     region: "Kerala",
     duration: "3 Days / 2 Nights",
     rating: 5.0,
-    image: "https://images.unsplash.com/photo-1627060938622-7f27ac14878a?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1627060938622-7f27ac14878a.jpg",
     tagline: "Misty hilltops, spice plantations and historical caves",
     category: "Domestic",
     inclusions: [
       "2 Nights accommodation in a scenic forest resort",
       "Daily breakfast & dinner",
-      "Private sightseeing cab from Salem",
+      "Private sightseeing cab",
       "Banasura Sagar Dam entry fee",
       "Toll, driver allowance & parking"
     ],
@@ -434,7 +434,7 @@ export const TOUR_PACKAGES: Package[] = [
       {
         day: 1,
         title: "Banasura Sagar Dam & Lakkidi View Point",
-        description: "Drive from Salem to Wayanad. Visit Banasura Sagar Dam, the largest earth dam in India. Later, take in the winding mountain views at Lakkidi View Point. Check in at your forest resort."
+        description: "Drive to Wayanad. Visit Banasura Sagar Dam, the largest earth dam in India. Later, take in the winding mountain views at Lakkidi View Point. Check in at your forest resort."
       },
       {
         day: 2,
@@ -444,7 +444,7 @@ export const TOUR_PACKAGES: Package[] = [
       {
         day: 3,
         title: "Pookode Lake & Return",
-        description: "Boating in the natural freshwater Pookode Lake. Walk around the lake paths. Visit a spice shop for cardamom and pepper before driving back to Salem."
+        description: "Boating in the natural freshwater Pookode Lake. Walk around the lake paths. Visit a spice shop for cardamom and pepper before returning."
       }
     ]
   },
@@ -455,7 +455,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "Kerala",
     duration: "3 Days / 2 Nights",
     rating: 5.0,
-    image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1602216056096-3b40cc0c9944.jpg",
     tagline: "Rolling green mountains, tea museums & cold morning mist",
     category: "Domestic",
     inclusions: [
@@ -483,7 +483,7 @@ export const TOUR_PACKAGES: Package[] = [
       {
         day: 3,
         title: "Eravikulam National Park & Return",
-        description: "Visit Eravikulam National Park, home of the endangered Nilgiri Tahr. Take a safari bus up the misty hills before checking out and returning to Salem."
+        description: "Visit Eravikulam National Park, home of the endangered Nilgiri Tahr. Take a safari bus up the misty hills before checking out and returning home."
       }
     ]
   },
@@ -494,7 +494,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "Kerala",
     duration: "3 Days / 2 Nights",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1589308078059-be1415eab4c3.jpg",
     tagline: "Dutch architecture, Jewish heritage and iconic Chinese fishing nets",
     category: "Domestic",
     inclusions: [
@@ -522,7 +522,7 @@ export const TOUR_PACKAGES: Package[] = [
       {
         day: 3,
         title: "Marine Drive & Return",
-        description: "Take a scenic morning boat cruise around the Kochi Harbor. Walk on Marine Drive walkway, shop at Lulu Mall, and head back to Salem."
+        description: "Take a scenic morning boat cruise around the Kochi Harbor. Walk on Marine Drive walkway, shop at Lulu Mall, and head back."
       }
     ]
   },
@@ -535,7 +535,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "United Arab Emirates",
     duration: "4 Days / 3 Nights",
     rating: 5.0,
-    image: "https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1582650625119-3a31f8fa2699.jpg",
     tagline: "High-tech meetings, desert team building & luxury networking",
     category: "MICE",
     inclusions: [
@@ -581,7 +581,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "Indonesia",
     duration: "5 Days / 4 Nights",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1544644181-1484b3fdfc62.jpg",
     tagline: "Eco-friendly meeting rooms, beachside brainstorming & team challenges",
     category: "MICE",
     inclusions: [
@@ -634,7 +634,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "South India",
     duration: "4 Days / 3 Nights",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1506012787146-f92b2d7d6d96.jpg",
     tagline: "Bangalore IT park industrial visit and Coorg adventure camp",
     category: "College",
     inclusions: [
@@ -643,7 +643,7 @@ export const TOUR_PACKAGES: Package[] = [
       "Trekking guide, campfire with music system & permissions",
       "River rafting or adventure ropes course entry fee",
       "All meals (hygienic, buffet style)",
-      "Semi-sleeper coach bus from Salem"
+      "Semi-sleeper coach bus transfer"
     ],
     exclusions: [
       "Personal shopping & snacks",
@@ -653,7 +653,7 @@ export const TOUR_PACKAGES: Package[] = [
       {
         day: 1,
         title: "IT Hub Visit (Bangalore) & Drive to Coorg",
-        description: "Depart Salem at midnight. Reach Bangalore in the morning. Visit a prominent IT Park or manufacturing plant for an industrial study session. Post-lunch, travel to Coorg. Check into adventure camp."
+        description: "Depart at midnight. Reach Bangalore in the morning. Visit a prominent IT Park or manufacturing plant for an industrial study session. Post-lunch, travel to Coorg. Check into adventure camp."
       },
       {
         day: 2,
@@ -667,8 +667,8 @@ export const TOUR_PACKAGES: Package[] = [
       },
       {
         day: 4,
-        title: "Dubare Elephant Camp & Return to Salem",
-        description: "Visit Dubare Elephant Camp to witness elephant bathing and feeding. Learn about forest conservation. After lunch, start return journey to Salem, arriving at night."
+        title: "Dubare Elephant Camp & Return",
+        description: "Visit Dubare Elephant Camp to witness elephant bathing and feeding. Learn about forest conservation. After lunch, start return journey, arriving at night."
       }
     ]
   },
@@ -679,7 +679,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "Kerala",
     duration: "4 Days / 3 Nights",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1548013146-72479768bada.jpg",
     tagline: "Kochi Port Trust industrial visit, Munnar tea factory study and trekking",
     category: "College",
     inclusions: [
@@ -688,7 +688,7 @@ export const TOUR_PACKAGES: Package[] = [
       "Munnar tea processing factory entry & lecture",
       "Campfire with music, trekking permit fees",
       "Daily breakfast, lunch, and dinner",
-      "Private bus transport from Salem"
+      "Private bus transport"
     ],
     exclusions: [
       "Personal laundry & telephone charges",
@@ -698,7 +698,7 @@ export const TOUR_PACKAGES: Package[] = [
       {
         day: 1,
         title: "Kochi Port Trust & Shipyard Tour",
-        description: "Depart Salem. Reach Kochi. Visit the harbor area or shipyard for an industrial tour regarding shipping operations and import/export logistics. Check-in at hotel."
+        description: "Depart and reach Kochi. Visit the harbor area or shipyard for an industrial tour regarding shipping operations and import/export logistics. Check-in at hotel."
       },
       {
         day: 2,
@@ -713,7 +713,7 @@ export const TOUR_PACKAGES: Package[] = [
       {
         day: 4,
         title: "Athirappilly Waterfalls & Return",
-        description: "Check out. Drive to the spectacular Athirappilly Waterfalls (often featured in movies). Study eco-tourism models. Drive back to Salem, reaching late."
+        description: "Check out. Drive to the spectacular Athirappilly Waterfalls (often featured in movies). Study eco-tourism models. Drive back, reaching late."
       }
     ]
   },
@@ -726,7 +726,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "South India",
     duration: "4 Days / 3 Nights",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1507608869274-d3177c8bb4c7.jpg",
     tagline: "Mysore Palace history, heritage walks & Ooty science museum excursions",
     category: "School",
     inclusions: [
@@ -735,7 +735,7 @@ export const TOUR_PACKAGES: Package[] = [
       "Dedicated school tour managers & female teachers' coordinators",
       "Healthy, low-spice vegetarian & non-vegetarian food",
       "Educational worksheets and quizzes during travel",
-      "Safe, GPS-enabled buses from Salem"
+      "Safe, GPS-enabled buses"
     ],
     exclusions: [
       "Personal toys or extra snacks bought by children",
@@ -745,7 +745,7 @@ export const TOUR_PACKAGES: Package[] = [
       {
         day: 1,
         title: "Mysore Palace & Science Planetarium",
-        description: "Early morning departure from Salem. Arrive in Mysore. Visit the historic Mysore Palace, learning about royal Indian history. In the afternoon, visit the regional Science Museum & Planetarium. Check-in at hotel."
+        description: "Early morning departure. Arrive in Mysore. Visit the historic Mysore Palace, learning about royal Indian history. In the afternoon, visit the regional Science Museum & Planetarium. Check-in at hotel."
       },
       {
         day: 2,
@@ -759,8 +759,8 @@ export const TOUR_PACKAGES: Package[] = [
       },
       {
         day: 4,
-        title: "Lake Boating & Return to Salem",
-        description: "Enjoy group paddle boating at Ooty Lake. After lunch, start drive back to Salem, arriving by evening. Handover students to parents."
+        title: "Lake Boating & Return",
+        description: "Enjoy group paddle boating at Ooty Lake. After lunch, start drive back, arriving by evening. Handover students to parents."
       }
     ]
   },
@@ -771,7 +771,7 @@ export const TOUR_PACKAGES: Package[] = [
     region: "Kerala",
     duration: "3 Days / 2 Nights",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=85",
+    image: "/images/unsplash_1473448912268-2022ce9509d8.jpg",
     tagline: "Neolithic carvings, organic farming workshops and wildlife safaris",
     category: "School",
     inclusions: [
@@ -788,7 +788,7 @@ export const TOUR_PACKAGES: Package[] = [
       {
         day: 1,
         title: "Edakkal Caves Neolithic History Walk",
-        description: "Drive from Salem. Reach Wayanad. Climb to Edakkal Caves. Our guide explains the ancient stone drawings dating back 8,000 years. Fun educational game at the base."
+        description: "Drive to Wayanad. Climb to Edakkal Caves. Our guide explains the ancient stone drawings dating back 8,000 years. Fun educational game at the base."
       },
       {
         day: 2,
@@ -798,7 +798,7 @@ export const TOUR_PACKAGES: Package[] = [
       {
         day: 3,
         title: "Pookode Lake Biosphere Study & Return",
-        description: "Study freshwater lake ecosystems at Pookode Lake. Learn about local fish species and wetlands. Return drive to Salem, reaching by dinner time."
+        description: "Study freshwater lake ecosystems at Pookode Lake. Learn about local fish species and wetlands. Return drive, reaching by dinner time."
       }
     ]
   }

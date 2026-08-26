@@ -6,19 +6,19 @@ const CARDS = [
   {
     title: "Personalized Travel",
     copy: "Trips shaped around your pace, interests, and the people you want to share them with.",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=85",
+    image: "/images/unsplash_1529156069898-49953e39b3ac.jpg",
     alt: "Friends enjoying a trip together",
   },
   {
     title: "Expert Planning",
     copy: "Well-chosen stays, thoughtful routes, and clear support from the first call to the return journey.",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=85",
+    image: "/images/unsplash_1469474968028-56623f02e42e.jpg",
     alt: "Mountain landscape viewed from a scenic road",
   },
   {
     title: "Memorable Experiences",
     copy: "Beautiful places and unhurried moments that stay with you long after the trip is over.",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85",
+    image: "/images/unsplash_1507525428034-b723cf961d3e.jpg",
     alt: "Sunset over a tropical beach",
   },
 ];
@@ -40,7 +40,7 @@ export default function AboutClaassical() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-6 text-base leading-relaxed text-nature-slate sm:text-lg"
         >
-          A Salem-based team of travel planners who handle the logistics so you can focus on the experience.
+          An expert team of travel planners who handle the logistics so you can focus on the experience.
         </motion.p>
       </div>
 

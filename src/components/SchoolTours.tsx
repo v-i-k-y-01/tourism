@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, ShieldAlert, HeartHandshake, Eye, Sparkles, ArrowUpRight, MapPin, Star } from "lucide-react";
+import { ArrowLeft, ShieldAlert, HeartHandshake, Eye, Sparkles } from "lucide-react";
 import RevealText from "./RevealText";
 import { TOUR_PACKAGES, type Package } from "../data/packagesData";
+import BoardingPassCard from "./BoardingPassCard";
 
 interface SchoolToursProps {
   onBack: () => void;
@@ -59,7 +60,7 @@ export default function SchoolTours({ onBack, onSelectPackage }: SchoolToursProp
                 className="font-display text-5xl font-semibold leading-[0.95] tracking-tight text-nature-forest sm:text-7xl"
               />
               <p className="mt-6 text-base leading-relaxed text-nature-slate sm:text-lg">
-                Classic 360 Holidays has been the trusted travel partner for leading schools in Salem. We design safe, educational, and engaging travel programs that expand children's horizons, supported by a 24/7 medical desk, verified vehicles, and child-safe meals.
+                Classic 360 Holidays has been the trusted travel partner for leading educational institutions. We design safe, educational, and engaging travel programs that expand children's horizons, supported by a 24/7 medical desk, verified vehicles, and child-safe meals.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
@@ -78,7 +79,7 @@ export default function SchoolTours({ onBack, onSelectPackage }: SchoolToursProp
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?auto=format&fit=crop&w=1200&q=85"
+                src="/images/unsplash_1507608869274-d3177c8bb4c7.jpg"
                 alt="School kids in nature park"
                 className="h-full w-full object-cover"
               />
@@ -138,53 +139,14 @@ export default function SchoolTours({ onBack, onSelectPackage }: SchoolToursProp
 
           <div className="mt-16 grid gap-8 sm:grid-cols-2 max-w-4xl mx-auto">
             {schoolPackages.map((pkg, idx) => (
-              <motion.div
+              <BoardingPassCard
                 key={pkg.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.12 }}
-                className="group flex flex-col overflow-hidden rounded-[28px] border border-black/5 bg-[#f5f5f5] shadow-card transition-shadow duration-300 hover:shadow-card-hover"
-              >
-                <div className="relative h-56 overflow-hidden">
-                  <img
-                    src={pkg.image}
-                    alt={pkg.name}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-nature-forest/40 to-transparent" />
-                  <span className="absolute right-4 top-4 flex items-center gap-1 bg-white/95 px-3 py-1 text-xs font-bold text-nature-forest backdrop-blur-md">
-                    <Star size={12} className="fill-nature-cobalt text-nature-cobalt" />
-                    {pkg.rating.toFixed(1)}
-                  </span>
-                </div>
-                <div className="flex flex-1 flex-col p-6 sm:p-7">
-                  <div className="flex items-center gap-1.5 text-nature-cobalt">
-                    <MapPin size={14} />
-                    <span className="text-xs font-semibold uppercase tracking-wide">
-                      {pkg.location}, {pkg.region}
-                    </span>
-                  </div>
-                  <h3 className="mt-2 font-display text-3xl font-bold leading-none text-nature-forest">
-                    {pkg.name}
-                  </h3>
-                  <p className="mt-3 text-sm text-nature-slate leading-relaxed flex-1">
-                    {pkg.tagline}
-                  </p>
-                  <div className="mt-6 flex items-center justify-between border-t border-black/5 pt-4">
-                    <span className="text-xs font-bold uppercase tracking-wider text-nature-slate">
-                      Duration: {pkg.duration}
-                    </span>
-                    <button
-                      onClick={() => onSelectPackage(pkg)}
-                      className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-nature-cobalt hover:underline"
-                    >
-                      View Itinerary
-                      <ArrowUpRight size={14} />
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
+                tourPackage={pkg}
+                onClick={() => onSelectPackage(pkg)}
+                seatNumber={`SCHL-${idx + 1}`}
+                gateNumber="SCHOOL"
+                index={idx}
+              />
             ))}
           </div>
         </div>

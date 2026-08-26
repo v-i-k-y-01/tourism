@@ -185,7 +185,7 @@ export default function ItineraryModal({ isOpen, onClose, tourPackage }: Itinera
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin size={16} className="text-nature-cobalt" />
-                  <span>Ex-Salem Departures</span>
+                  <span>Multi-City Departures</span>
                 </div>
               </div>
 

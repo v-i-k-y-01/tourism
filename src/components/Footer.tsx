@@ -11,7 +11,7 @@ const CONTACT = [
   { icon: Phone, label: "+91 86681 74225", href: "tel:+918668174225" },
   {
     icon: MapPin,
-    label: "Kannagi Complex, Kuranguchavadi Bus Stop, Omalur Main Rd, above Lakshmi Coffee Bar, Salem 636004",
+    label: "Head Office: Kuranguchavadi, Salem (Serving Travelers Nationwide)",
     href: "https://maps.google.com/?q=Kannagi+Complex+Kuranguchavadi+Bus+Stop+Salem+636004",
   },
 ];
